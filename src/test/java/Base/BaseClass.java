@@ -36,7 +36,7 @@ public class BaseClass {
         }
     }
 
-    //Browser is close after every test
+    //Test
     @AfterTest
     public static void closeBrowser() throws IOException
     {
