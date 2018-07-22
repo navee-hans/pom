@@ -36,7 +36,7 @@ public class BaseClass {
         }
     }
 
-    //Test
+    //Test1234
     @AfterTest
     public static void closeBrowser() throws IOException
     {
