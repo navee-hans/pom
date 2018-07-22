@@ -16,7 +16,7 @@ public class LoginPage{
     @FindBy(css="input[id='u_0_2']")
     public WebElement loginButton;
 
-    public void validLogin(String UserName, String PassWord)
+    public void inValidLogin(String UserName, String PassWord)
     {
             usernameTextField.sendKeys(UserName);
             passwordTextField.sendKeys(PassWord);

@@ -2,6 +2,7 @@ package logintest;
 
 import Base.BaseClass;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -13,9 +14,9 @@ public class LoginTest extends BaseClass{
     public void LoginTest()
     {
         LoginPage loginpage = PageFactory.initElements(BaseClass.driver, LoginPage.class);
-        loginpage.validLogin(Constant.UserName, Constant.PassWord);
+        loginpage.inValidLogin(Constant.UserName, Constant.PassWord);
         HomePage homepage = new HomePage(driver);
-        homepage.userNameDisplayed(Constant.ActualResult);
+        Assert.assertFalse(homepage.userNameDisplayed(Constant.ActualResult));
     }
 
 }
